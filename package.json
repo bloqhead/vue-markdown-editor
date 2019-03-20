@@ -1,0 +1,26 @@
+{
+  "name": "vue-markdown-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Daryn St. Pierre",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "now-build": "parcel build index.js",
+    "now-start": "serve ./dist"
+  },
+  "dependencies": {
+    "marked": "^0.6.1",
+    "parcel-bundler": "^1.12.2",
+    "serve": "^10.1.2",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.6.0",
+    "pug": "^2.0.3",
+    "sass": "^1.17.3",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

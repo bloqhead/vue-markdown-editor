@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --color-1: rgba(255, 190, 11, 1);
+  --color-2: rgba(252, 128, 40, 1);
+  --color-3: rgba(255, 0, 110, 1);
+  --color-4: rgba(167, 62, 159, 1);
+  --color-5: rgba(131, 56, 236, 1);
+  --color-6: #555;
+  font-family: "Fira Mono", monospace;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #eee;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  min-height: 100vh;
+}
+
+.content,
+.processed {
+  flex: 1 0 0;
+  padding: 2rem 4rem;
+  outline: 0;
+  word-break: break-all;
+}
+
+.content {
+  border: 0;
+  border-bottom: 1px solid #333;
+  resize: none;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+
+.processed > *::first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.processed h1, .processed h2, .processed h3, .processed h4, .processed h5, .processed h6 {
+  margin: 1rem 0;
+  padding: 0;
+  position: relative;
+}
+.processed h1::before, .processed h2::before, .processed h3::before, .processed h4::before, .processed h5::before, .processed h6::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0;
+  text-transform: none;
+  transform: translate(-150%, -50%);
+  background-color: #111;
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+}
+.processed ul, .processed ol, .processed li {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.processed > ul, .processed > ol {
+  color: var(--color-6);
+  padding-left: 2rem;
+  position: relative;
+}
+.processed > ul::before, .processed > ol::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0;
+  text-transform: none;
+  transform: translate(-150%, -50%);
+  background-color: #111;
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+}
+.processed > ul::before, .processed > ol::before {
+  top: 0;
+  transform: translate(-140%, 0);
+}
+.processed > ul::before {
+  content: "ul";
+}
+.processed > ol::before {
+  content: "ol";
+}
+
+h1 {
+  color: var(--color-4);
+}
+
+h2 {
+  color: var(--color-1);
+}
+
+h3, h4 {
+  color: var(--color-2);
+}
+
+h5, h6 {
+  color: var(--color-6);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--color-3);
+  margin: 3rem 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-2);
+}
+
+h1::before {
+  content: "h1";
+}
+
+h2::before {
+  content: "h2";
+}
+
+h3::before {
+  content: "h3";
+}
+
+h4::before {
+  content: "h4";
+}
+
+h5::before {
+  content: "h5";
+}
+
+h6::before {
+  content: "h6";
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .content {
+    border-bottom: 0;
+    border-right: 1px solid #333;
+  }
+}
