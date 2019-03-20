@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
+    "deploy": "now; wait; now alias set https://markdown.bloqhead.now.sh md.bloq.io",
     "now-build": "parcel build index.js",
     "now-start": "serve ./dist"
   },
